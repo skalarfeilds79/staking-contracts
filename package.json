@@ -10,6 +10,8 @@
     "stake": "hardhat run scripts/stake.ts --network polygonsdk",
     "unstake": "hardhat run scripts/unstake.ts --network polygonsdk",
     "info": "hardhat run scripts/info.ts --network polygonsdk",
+    "info-dummy": "hardhat run scripts/infoDummy.ts --network polygonsdk",
+    "deploy-dummy": "hardhat run scripts/deployDummy.ts --network polygonsdk",
     "test": "npx hardhat test",
     "clean": "npx hardhat clean",
     "compile": "npx hardhat compile"
