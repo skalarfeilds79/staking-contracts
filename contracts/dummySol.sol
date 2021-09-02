@@ -8,20 +8,24 @@ contract StakingDummy {
 
     // Properties
     address[] public _validators;      
-    uint256 b;
-    uint256 c;
-    uint256 d;
+    mapping(address => bool) _addressToIsValidator;
+    mapping(address => uint256) _addressToStakedAmount;
+    mapping(address => uint256) _addressToValidatorIndex;
     uint256 _stakedAmount;
 
     constructor() {
         _validators.push(0x2E6e1996eA0568C05334fB9ce10F2aF32080F7Fc);
-        b = 2 ether;
-        c = 3 ether;
-        d = 4 ether;
+        _addressToIsValidator[0x2E6e1996eA0568C05334fB9ce10F2aF32080F7Fc] = true;
+        _addressToStakedAmount[0x2E6e1996eA0568C05334fB9ce10F2aF32080F7Fc] = 1 ether;
+        _addressToValidatorIndex[0x2E6e1996eA0568C05334fB9ce10F2aF32080F7Fc] = 0;
         _stakedAmount = 1 ether;
     }
 
     function stakedAmount() public view returns (uint256) {
         return _stakedAmount;
+    }
+
+    function validators() public view returns (address[] memory) {
+        return _validators;
     }
 }

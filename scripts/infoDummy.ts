@@ -9,11 +9,11 @@ async function main() {
   const StakingContractFactory = await ethers.getContractFactory("StakingDummy");
   const stakingContract = await StakingContractFactory.attach(STAKING_CONTRACT_ADDRESS) as StakingDummy;
 
-  const [stakedAmount] = await Promise.all([
-    stakingContract.stakedAmount()
+  const [validators] = await Promise.all([
+    stakingContract.validators(),
   ])
 
-  console.log(`Total staked amount: ${stakedAmount.toString()}`)
+  console.log('Current Validators', validators);
   // 2fb25caf989d8e4806c5c1cb7c448a4453deaa8453d5d54cc9cf0638b24d1ae6 PK
   // 0x2E6e1996eA0568C05334fB9ce10F2aF32080F7Fc addr
 }
