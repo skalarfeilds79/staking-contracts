@@ -33,7 +33,7 @@
     "@types/mocha": "^9.0.0",
     "@types/node": "^16.7.1",
     "chai": "^4.3.4",
-    "ethereum-waffle": "^3.4.0",
+    "ethereum-waffle": "^4.0.7",
     "hardhat-gas-reporter": "^1.0.4",
     "solhint": "^3.3.6",
     "solidity-coverage": "^0.7.16",
